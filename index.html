@@ -24,25 +24,28 @@
         </span>
         <div class="form-box login">
             <h2>Login</h2>
-            <form action="#">
+            <form onsubmit="return validate()">
                 <div class="input-box">
                     <span class="icon">
                         <ion-icon name = "mail"></ion-icon> 
                      </span>
-                    <input type="email" required>
-                    <label>Email</label>
+                    <input id="email"  required>
+                    <label>Email ID</label>
                 </div>
                 <div class="input-box">
                     <span class="icon">
                         <ion-icon name="lock-closed"></ion-icon>
                     </span>
-                    <input type="password" required>
+                    <input id="password" >
                     <label> Password</label>
                 </div>
                 <div class="remember-forgot">
                     <label><input type="checkbox"> Remember me</label>
                     <a href="#">Forgot my password</a>
                 </div>
+
+                <div id="error-message" style="color: white; margin-top: 10px;"></div> <!-- Error message container -->
+
                 <button type="submit" class="btn">Login</button>
                 <div class="login-register">
                     <p>Don't have an account <a href="#" class="register-link">Register</a></p>
@@ -51,31 +54,34 @@
         </div>
         <div class="form-box register">
             <h2>registration</h2>
-            <form action="#">
+            <form onsubmit="return validate_registration()" action="#">
                 <div class="input-box">
                     <span class="icon">
                         <ion-icon name = "person"></ion-icon> 
                      </span>
-                    <input type="text" required>
+                    <input id="uname" type="text" >
                     <label>Username</label>
                 </div>
                 <div class="input-box">
                     <span class="icon">
                         <ion-icon name="email"></ion-icon>
                     </span>
-                    <input type="email" required>
+                    <input id="remail" >
                     <label>Email</label>
                 </div>
                 <div class="input-box">
                     <span class="icon">
                         <ion-icon name="lock-closed"></ion-icon>
                     </span>
-                    <input type="password" required>
+                    <input id="reg-password">
                     <label> Password</label>
                 </div>
                 <div class="remember-forgot">
                     <label><input type="checkbox"> I agree to the terms & conditions </label>
                 </div>
+
+                <div id="error-reg-message" style="color: white; margin-top: 10px;"></div> <!-- Error message container -->
+
                 <button type="submit" class="btn">Register</button>
                 <div class="login-register">
                     <p>already have an account <a href="#" class="login-link">Login</a></p>
