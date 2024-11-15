@@ -77,5 +77,18 @@ function validate_registration() {
 }
 
 
+
+// Function to show the requested content section
+function showContent(page) {
+    // Hide all pages
+    document.querySelectorAll('.page').forEach((section) => {
+        section.style.display = 'none';
+    });
+
+    // Display the selected page
+    document.getElementById(page).style.display = 'block';
+}
+
+
     
 

@@ -254,3 +254,102 @@ transform: translateX(0);
 .login-register p a:hover {
    text-decoration: underline;
 }
+
+
+
+.home{
+   color: white;
+}
+
+
+
+#introduction {
+   background-color: rgba(255, 255, 255, 0.0); /* Semi-transparent background */
+   border: 2px solid rgba(255, 255, 255, 0.0); /* Subtle border */
+   border-radius: 10px; /* Rounded corners */
+   backdrop-filter: blur(10px); /* Glassmorphism effect */
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Soft shadow */
+   padding: 20px 30px; /* Inner spacing */
+   margin: 20px auto; /* Center alignment */
+   max-width: 800px; /* Restrict width */
+   text-align: left; /* Center-align text */
+   color: #162938; /* Primary text color */
+   font-family: 'Poppins', sans-serif; /* Consistent font */
+   margin-bottom: 30px; /* Adjust as needed */
+   padding: 20px;
+   
+   border-radius: 10px;
+}
+
+#introduction h1 {
+   font-size: 2.5em;
+   color: white
+}
+
+#introduction h2 {
+   color: white; /* Match with table header color */
+   font-size: 1.5em;
+   margin-top: 10px;
+   font-family: 'Poppins', sans-serif;
+}
+
+#introduction p {
+   font-size: 1em;
+   color: #333;
+}
+
+#introduction, .class-schedule {
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.class-schedule {
+   width: 100%;
+   max-width: 800px;
+   margin: 20px auto;
+   border-collapse: collapse;
+   text-align: left;
+   font-family: 'Poppins', sans-serif;
+   background-color: rgba(255, 255, 255, 0.4);
+   border: 2px solid rgba(255, 255, 255, 0.3);
+   border-radius: 10px;
+   backdrop-filter: blur(10px);
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+   overflow: hidden;
+}
+
+
+
+.class-schedule thead {
+   background-color: #162938; /* Matches your theme's primary color */
+   color: #fff;
+   text-transform: uppercase;
+}
+
+.class-schedule th, .class-schedule td {
+   padding: 15px;
+   border: none;
+   font-size: 1em;
+   color: #162938;
+   font-weight: 500;
+}
+
+.class-schedule tr:nth-child(even) {
+   background-color: rgba(22, 41, 56, 0.1); /* Subtle highlight for alternating rows */
+}
+
+.class-schedule tr:hover {
+   background-color: rgba(22, 41, 56, 0.2); /* Slight hover effect */
+}
+
+.class-schedule th {
+   font-size: 1.1em;
+   font-weight: 600;
+   text-align: left;
+   color: #fff;
+}
+
+.class-schedule-container {
+   display: flex;
+   justify-content: center;
+   margin-top: 20px; /* Add some top margin to push it down from the intro section */
+}
