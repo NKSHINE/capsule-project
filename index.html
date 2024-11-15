@@ -11,13 +11,26 @@
     <header>
         <h2 class="logo">Logo</h2>
         <nav class="navigation">
-            <a href="#">HOME</a>
-            <a href="#">ABOUT</a>
-            <a href="#">SERVICES</a>
-            <a href="#">CONTACT</a>
+            <a href="#" onclick="showContent('home')">HOME</a>
+            <a href="#" onclick="showContent('about')">ABOUT</a>
+            <a href="#" onclick="showContent('services')">SERVICES</a>
+            <a href="#" onclick="showContent('contact')">CONTACT</a>
             <button class="btnLogin-popup">Login</button>
         </nav>
     </header>
+
+    <main id="content">
+        <div id="home" class="page">
+            <h1>Welcome to the Home Page!</h1><br></br>
+            <h2>INTRODUCTION<h2>
+            <br>
+        </div>
+        <div id="about" class="page" style="display: none;">Learn more about us on the About Page.</div>
+        <div id="services" class="page" style="display: none;">Discover our services on the Services Page.</div>
+        <div id="contact" class="page" style="display: none;">Get in touch with us on the Contact Page.</div>
+    </main>
+
+
     <div class="wrapper">
         <span class="icon-close">
             <ion-icon name="close"></ion-icon>

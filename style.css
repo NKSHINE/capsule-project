@@ -254,3 +254,9 @@ transform: translateX(0);
 .login-register p a:hover {
    text-decoration: underline;
 }
+
+
+
+.home{
+   color: white;
+}
