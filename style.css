@@ -25,12 +25,15 @@ header{
    justify-content: space between;
    align-items: center;
    z-index: 99;
+   background-color: #333;
+   
 }
 
 .logo{
    font-size: 2em;
    color: #ffff;
    user-select: none;
+   display: flex;
 }
 
 .navigation a{
@@ -40,6 +43,7 @@ header{
    text-decoration: none;
    font-weight: 500;
    margin-left: 40px;
+   
 }
 
 .navigation a::after{
@@ -186,6 +190,9 @@ transform: translateX(0);
    color: #162938;
    font-weight: 600;
    padding: 0 35px 0 5px;
+   background: rgba(255, 255, 255, 0.1);
+   border-radius: 10px;
+   padding: 10px;
 }
 
 .input-box .icon {
@@ -259,10 +266,13 @@ transform: translateX(0);
 
 .home{
    color: white;
+   display: flex;
+   margin-top: 10px; /* Adjust this value as needed */
 }
-
-
-
+#content {
+   margin-top: 100px; /* Adjust this value as needed */
+   margin-left: 10px;
+}
 #introduction {
    background-color: rgba(255, 255, 255, 0.0); /* Semi-transparent background */
    border: 2px solid rgba(255, 255, 255, 0.0); /* Subtle border */
@@ -270,7 +280,7 @@ transform: translateX(0);
    backdrop-filter: blur(10px); /* Glassmorphism effect */
    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Soft shadow */
    padding: 20px 30px; /* Inner spacing */
-   margin: 20px auto; /* Center alignment */
+   margin: 10px; /* Center alignment */
    max-width: 800px; /* Restrict width */
    text-align: left; /* Center-align text */
    color: #162938; /* Primary text color */
@@ -283,19 +293,21 @@ transform: translateX(0);
 
 #introduction h1 {
    font-size: 2.5em;
-   color: white
+   color: white;
+   margin: 10px;
 }
 
 #introduction h2 {
    color: white; /* Match with table header color */
    font-size: 1.5em;
-   margin-top: 10px;
+   margin: 10px;
    font-family: 'Poppins', sans-serif;
 }
 
 #introduction p {
    font-size: 1em;
-   color: #333;
+   color: #ffffff;
+   margin: 10px;
 }
 
 #introduction, .class-schedule {
@@ -315,6 +327,7 @@ transform: translateX(0);
    backdrop-filter: blur(10px);
    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
    overflow: hidden;
+   margin: 10px;
 }
 
 
@@ -352,4 +365,50 @@ transform: translateX(0);
    display: flex;
    justify-content: center;
    margin-top: 20px; /* Add some top margin to push it down from the intro section */
+}
+
+.card-container {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 20px; /* Space between cards */
+   margin: 10px;
+}
+.card {
+   background-color: rgba(255, 255, 255, 0.3); /* White with 80% opacity */
+   border: 1px solid #ccc; /* Optional: Adds a light border */
+   border-radius: 10px; /* Optional: Rounds the corners */
+   padding: 20px; /* Adds space inside the card */
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for depth */
+   width: calc(33% - 40px);
+   margin: 20px auto; /* Centers the card horizontally */
+   text-align: center;
+}
+
+
+@media (max-width: 768px) {
+   header {
+       padding: 20px 50px;
+   }
+
+   .navigation a {
+       margin-left: 20px;
+       font-size: 1em;
+   }
+
+   .card-container {
+       flex-direction: column;
+       align-items: center;
+   }
+
+   .card {
+       width: 80%;
+   }
+}
+
+.btn:hover {
+   background-color: #fff;
+   color: #162938;
+   transform: scale(1.05);
+   transition: 0.3s ease;
 }
