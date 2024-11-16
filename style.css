@@ -87,7 +87,10 @@ header{
 }
 
 .wrapper {
-   position: relative;
+   position: fixed; /* Changed to fixed for centering on screen */
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%) scale(0); /* Centered with scale(0) */
    width: 400px;
    height: 440px;
    background: transparent;
@@ -99,17 +102,19 @@ header{
    justify-content: center;
    overflow: hidden;
    align-items: center;
-   transform: scale(0);
-   transition:transform .5s ease, height .2s ease;
+   transition: transform 0.5s ease, height 0.2s ease;
+   z-index: 100;
 }
 
-.wrapper.active-popup{
-   transform: scale(1);
+.wrapper.active-popup {
+   transform: translate(-50%, -50%) scale(1); /* Scale to 1 when active */
 }
 
 .wrapper.active {
    height: 520px;
 }
+
+
 
 .wrapper .form-box {
    width: 100%;
@@ -190,7 +195,7 @@ transform: translateX(0);
    color: #162938;
    font-weight: 600;
    padding: 0 35px 0 5px;
-   background: rgba(255, 255, 255, 0.1);
+   background: rgba(255, 255, 255, 0.0);
    border-radius: 10px;
    padding: 10px;
 }
