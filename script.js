@@ -1,26 +1,40 @@
-const wrapper = document.querySelector('.wrapper');
-const loginLink = document.querySelector('.login-link');
-const registerLink = document.querySelector('.register-link');
+document.addEventListener('DOMContentLoaded', () => {
+    const wrapper = document.querySelector('.wrapper');
+    const loginForm = document.querySelector('.form-box.login');
+    const registerForm = document.querySelector('.form-box.register');
+    const btnLoginPopup = document.querySelector('.btnLogin-popup');
+    const iconClose = document.querySelector('.icon-close');
+    const registerLink = document.querySelector('.register-link');
+    const loginLink = document.querySelector('.login-link');
 
-const btnPopup = document.querySelector('.btnLogin-popup');
+    // Show login popup
+    btnLoginPopup.addEventListener('click', () => {
+        wrapper.classList.add('active-popup');
+        loginForm.style.transform = 'translateX(0)';
+        registerForm.style.transform = 'translateX(400px)';
+    });
 
-const iconclose = document.querySelector('.icon-close');
+    // Close popup
+    iconClose.addEventListener('click', () => {
+        wrapper.classList.remove('active-popup');
+    });
 
-registerLink.addEventListener('click', () => {
-    wrapper.classList.add('active');
+    // Switch to register form
+    registerLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        loginForm.style.transform = 'translateX(-400px)';
+        registerForm.style.transform = 'translateX(0)';
+    });
+
+    // Switch back to login form
+    loginLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        loginForm.style.transform = 'translateX(0)';
+        registerForm.style.transform = 'translateX(400px)';
+    });
 });
 
-loginLink.addEventListener('click', () => {
-    wrapper.classList.remove('active');
-});
 
-btnPopup.addEventListener('click', () => {
-    wrapper.classList.add('active-popup');
-});
-
-iconclose.addEventListener('click', () => {
-    wrapper.classList.remove('active-popup');
-});
 
 function validate() {
     var email = document.getElementById("email");
@@ -45,6 +59,7 @@ function validate() {
 
     return true; // Only submit if both validations pass
 }
+
 
 function validate_registration() {
     var email = document.getElementById("remail");
@@ -71,9 +86,7 @@ function validate_registration() {
     if (pass.value == "") {
         errorMessage.innerHTML = "incorrect password !";
         return false;
-    }
-
-    return true; // Only submit if both validations pass
+    }    return true; // Only submit if both validations pass
 }
 
 
