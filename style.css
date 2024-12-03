@@ -25,7 +25,7 @@ header{
    justify-content: space between;
    align-items: center;
    z-index: 99;
-   background-color: #333;
+   background-color: #10c4e3;
    
 }
 
@@ -367,7 +367,7 @@ transform: translateX(0);
    font-size: 1.1em;
    font-weight: 600;
    text-align: left;
-   color: #fff;
+   color: #0d124a;
 }
 
 .class-schedule-container {
@@ -384,18 +384,18 @@ transform: translateX(0);
    margin: 10px;
 }
 .card {
-   background-color: rgba(237, 50, 159, 0.2); /* White with 80% opacity */
-   border: 1px solid #ccc; /* Optional: Adds a light border */
+   background-color: rgba(78, 139, 200, 0.519); /* White with 80% opacity */
+   border: 1px solid #0958bf; /* Optional: Adds a light border */
    border-radius: 10px; /* Optional: Rounds the corners */
    padding: 20px; /* Adds space inside the card */
-   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8); /* Optional: Adds a shadow for depth */
+   box-shadow: 0 4px 6px rgba(5, 64, 84, 0.741); /* Optional: Adds a shadow for depth */
    width: calc(33% - 40px);
    margin: 20px auto; /* Centers the card horizontally */
    text-align: center;
 }
 
 .intro-card{
-   background-color: rgba(237, 50, 159, 0.2);
+   background-color: rgba(63, 21, 234, 0.2);
    border-radius: 10px; /* Optional: Rounds the corners */
    padding: 30px; /* Adds space inside the card */
    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.8); /* Optional: Adds a shadow for depth */
@@ -426,7 +426,7 @@ transform: translateX(0);
 
 .btn:hover {
    background-color: #fff;
-   color: #162938;
+   color: #187ecc;
    transform: scale(1.05);
    transition: 0.3s ease;
 }
