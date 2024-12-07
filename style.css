@@ -1,3 +1,71 @@
+.card-1 {
+   background-image: url('logo.png');
+}
+
+.card {
+   
+   min-height: 250px;
+   background: #ffffff; /* Card background color */
+   border-radius: 15px;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Base shadow */
+  
+   overflow: hidden;
+   transition: 0.3s; /* Smooth effect for hover states */
+   background-color: rgba(211, 192, 255, 0.519); /* White with 80% opacity */
+   
+   padding: 20px; /* Adds space inside the card */
+  
+   width: 25%;
+   margin: 20px auto ; /* Centers the card horizontally */
+   text-align: center;
+}
+
+/* Adding the shining effect */
+.card::before {
+   content: '';
+   position: absolute;
+   top: -100%;
+   left: -100%;
+   width: 200%;
+   height: 200%;
+   background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2));
+   transform: rotate(45deg);
+   transition: opacity 0.3s;
+   opacity: 0;
+   pointer-events: none;
+}
+
+/* Trigger the effect on hover */
+.card:hover::before {
+   opacity: 1;
+   animation: shine 1.5s infinite; /* Infinite animation loop */
+}
+
+/* Hover scaling and glowing */
+.card:hover {
+   transform: scale(1.05); /* Slight zoom */
+   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Intense shadow */
+}
+
+/* Keyframes for shine effect */
+@keyframes shine {
+   0% {
+       top: -100%;
+       left: -100%;
+   }
+   50% {
+       top: 100%;
+       left: 100%;
+   }
+   100% {
+       top: 200%;
+       left: 200%;
+   }
+}
+
+ 
+ 
+ 
  * {
     margin:0;
     padding:0;
@@ -6,11 +74,12 @@
 }
 
 body{
+   font-family:'Times New Roman', Times, serif ;
    display:flex;
    justify-content: center;
    align-items: center;
    min-height:100vh;
-   background: url('background.jpg')no-repeat;
+   background-color: #ffffff;
    background-size: cover;
    background-position: center;
 }
@@ -20,22 +89,38 @@ header{
    top: 0;
    left: 0;
    width: 100%;
-   padding: 20px 100px;
+  
    display: flex ;
    justify-content: space between;
    align-items: center;
    z-index: 99;
-   background-color: #10c4e3;
+   background-color: #ac9f9f;
    
 }
+img {
+   border-radius: 50%;
+ }
 
-.logo{
-   color:#ffffff;
+.mail_img{
+   width: 90px;
+   height: 150px;
 }
 
-.logo img {
-   height: 50px; /* Adjust as needed */
-   width: auto;  /* Keeps aspect ratio */
+ .img1 {
+   
+ 
+   width: 10px; /* Reduced width */
+   height: auto; /* Image takes 50% of the container's width */
+ 
+ 
+ }
+.logo{
+   color: #ffffff;
+   position: relative;
+   height: 70px; /* Adjust as needed */
+   left:0;
+   border-radius: 50%;
+   text-align: left;
  }
 
 .navigation a{
@@ -150,7 +235,7 @@ transform: translateX(0);
    right: 0;
    width: 45px;
    height: 45px;
-   background: #162938;
+   background: #000000;
    font-size: 2em;
    color: #fff;
    display: flex;
@@ -241,7 +326,7 @@ transform: translateX(0);
 .btn {
    width: 100%;
    height: 45px;
-   background: #162938;
+   background: #000000;
    border: none;
    outline: none;
    border-radius: 6px;
@@ -378,27 +463,18 @@ transform: translateX(0);
 
 .card-container {
    display: flex;
-   flex-wrap: wrap;
+   
    justify-content: center;
-   gap: 20px; /* Space between cards */
+   gap: 10px; /* Space between cards */
    margin: 10px;
 }
-.card {
-   background-color: rgba(78, 139, 200, 0.519); /* White with 80% opacity */
-   border: 1px solid #0958bf; /* Optional: Adds a light border */
-   border-radius: 10px; /* Optional: Rounds the corners */
-   padding: 20px; /* Adds space inside the card */
-   box-shadow: 0 4px 6px rgba(5, 64, 84, 0.741); /* Optional: Adds a shadow for depth */
-   width: calc(33% - 40px);
-   margin: 20px auto; /* Centers the card horizontally */
-   text-align: center;
-}
+
 
 .intro-card{
-   background-color: rgba(63, 21, 234, 0.2);
+   background-color: rgba(56, 48, 84, 0.2);
    border-radius: 10px; /* Optional: Rounds the corners */
    padding: 30px; /* Adds space inside the card */
-   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.8); /* Optional: Adds a shadow for depth */
+  
   
    margin: 20px auto; /* Centers the card horizontally */
    text-align: center;
@@ -430,3 +506,4 @@ transform: translateX(0);
    transform: scale(1.05);
    transition: 0.3s ease;
 }
+
