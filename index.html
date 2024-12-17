@@ -3,152 +3,253 @@
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <title>Website  </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Website</title>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
-        
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+            
+        <!-- Bootstrap Bundle with Popper (for toggle functionality) -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <header>
-            <div class="logo-container">
-                <img src="logo.png" alt="Capsule Logo" class="logo">
-            </div>
-            
-            <h2 style="color: #ffffff;">CAPSULE</h2>
-            <nav class="navigation">
-                <a href="#" onclick="showContent('home')">HOME</a>
-                <a href="#" onclick="showContent('about')">ABOUT</a>
-                <a href="#" onclick="showContent('classes')">CLASSES</a>
-                <a href="#" onclick="showContent('contact')">CONTACT</a>
-                <button class="btnLogin-popup">Login</button>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <!-- Logo -->
+                    <a class="navbar-brand d-flex align-items-center" href="#">
+                        <img src="logo.png" alt="Capsule Logo" class="logo me-2" style="height: 40px;">
+                        <h2 class="m-0" style="color: #ffffff;">CAPSULE</h2>
+                    </a>
+                    
+                    <!-- Hamburger Menu for Mobile -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+        
+                    <!-- Navigation Links -->
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" onclick="showContent('home')">HOME</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" onclick="showContent('about')">ABOUT</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" onclick="showContent('classes')">CLASSES</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" onclick="showContent('contact')">CONTACT</a>
+                            </li>
+                            <li class="nav-item">
+                                <button class="btn btn-outline-light btnLogin-popup ms-lg-3">Login</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </nav>
         </header>
+        
 
         <main id="content">
             <div id="home" class="page">
-                <h1 style="color: #000000; margin-top: 90px;font-family: 'Roboto', sans-serif;">Welcome to Capsule Online Tutoring</h1>
-                <h2 style="color:#5d5b5b;font-style: italic;">"Beyond the classroom where true understanding begins"</h2>
+                <h1 style="color: #000000; margin-top: 90px; font-family: 'Roboto', sans-serif;">Welcome to Capsule Online Tutoring</h1>
+                <h2 style="color:#5d5b5b; font-style: italic;">"Beyond the classroom where true understanding begins"</h2>
                 <h3 style="color: #000000; margin-top: 40px;">INTRODUCTION</h3>
-                
-                    <p class="intro-card">Welcome to CAPSULE , your gateway to a world of limitless learning. Explore,discover and achieve your educational goals with our comprehensive resources,one to one mentoring,expert guidance,and supportive community.     
-                        Our online tuition ensures personolized learning with experienced educators,covering all major subjects and helping you excel your board exams.
-                        Transform your journey with our passionate lecture classes! Lets unlock your potential together and achieve your dreams.
-                    </p>    
-                
+            
+                <p class="intro-card">Welcome to CAPSULE, your gateway to a world of limitless learning. Explore, discover, and achieve your educational goals with our comprehensive resources, one-to-one mentoring, expert guidance, and supportive community.
+                    Our online tuition ensures personalized learning with experienced educators, covering all major subjects and helping you excel in your board exams.
+                    Transform your journey with our passionate lecture classes! Let's unlock your potential together and achieve your dreams.
+                </p>
+            
                 <h3 style="color: #000000; margin-top: 40px;">WHAT MAKES US STAND OUT</h3>
-                <div  class="card-container">
-                    <div class="card">
-                        <img  src="img1.jpg" alt="Avatar" style="width:100%" class="img1" >
-                        <h3>SUPPORT FOR STUDENTS</h3>
-                        <p >We're committed to providing a supportive learning enviornment that fosters academic success and personal growth.</p>
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+                    <div class="col">
+                        <div class="card d-flex flex-column h-100">
+                            <img src="img1.jpg" alt="Avatar" class="img-fluid">
+                            <div class="card-body">
+                                <h3>SUPPORT FOR STUDENTS</h3>
+                                <p>We're committed to providing a supportive learning environment that fosters academic success and personal growth.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card">
-                        <img  src="img2.jpg" alt="Avatar" style="width:100%" class="img1" >
-                        <h3>INDIVIDUAL ATTENTION</h3> 
-                        <p>By providing personal attention we can ensure your progress and helps you overcome challenges and reach your full potential to achieve your goals.</p>
+                    <div class="col">
+                        <div class="card d-flex flex-column h-100">
+                            <img src="img2.jpg" alt="Avatar" class="img-fluid">
+                            <div class="card-body">
+                                <h3>INDIVIDUAL ATTENTION</h3>
+                                <p>By providing personal attention, we can ensure your progress and help you overcome challenges to achieve your goals.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card">
-                        <img  src="img3.jpg" alt="Avatar" style="width:100%" class="img1" >
-                        <h3>CERTIFIED FACULTIES</h3>
-                        <p>our certified faculties are passionate  educators dedicated to inspiring and guiding every students on their unique learning journey.</p>
-                    </div>                       
-                    
-                    <div class="card">
-
-                        <img  src="img4.jpg" alt="Avatar" style="width:100%" class="img1" >
-                        <h3>DOUBT CLEARING SESSIONS</h3>
-                        <p>we ensure the clarity of concept you have understood by arranging separate doubt clearing sessions.</p>
+                    <div class="col">
+                        <div class="card d-flex flex-column h-100">
+                            <img src="img3.jpg" alt="Avatar" class="img-fluid">
+                            <div class="card-body">
+                                <h3>CERTIFIED FACULTIES</h3>
+                                <p>Our certified faculties are passionate educators dedicated to inspiring and guiding every student on their unique learning journey.</p>
+                            </div>
+                        </div>
                     </div>
-                </div>  
-                <h3 style="color: #000000; margin-top: 20px;">CLASSES</h3>
-                <div class="card-container">
-                    <div class="card">
-                        <h3>Card 1</h3>
-                        <p>.</p>
-                    </div>  
+                    <div class="col">
+                        <div class="card d-flex flex-column h-100">
+                            <img src="img4.jpg" alt="Avatar" class="img-fluid">
+                            <div class="card-body">
+                                <h3>DOUBT CLEARING SESSIONS</h3>
+                                <p>We ensure the clarity of the concepts you've understood by arranging separate doubt clearing sessions.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <h3 style="color: #000000; margin-top: 40px;">OUR SPECALITIES</h3>
-                <div class="card-container">
-                    <div class="card">
-                        <img  src="img5.jpg" alt="Avatar" style="width:100%" class="img1" >
-                        <h3>COMPETITIVE</h3>
-                        <p>We live with the same competitive spirit as that of our students and aim to be ahead in all that we do.</p>
+            
+                <h3 style="color: #000000; margin-top: 20px;">CLASSES</h3>
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+                    <div class="col">
+                        <div class="card d-flex flex-column h-100">
+                            <h3>Card 1</h3>
+                            <p>.</p>
+                        </div>
                     </div>
-                    
-                    <div class="card">
-                        <img  src="img6.png" alt="Avatar" style="width:100%" class="img1" >
-                        <h3>COMMITMENT</h3>
-                        <p>we are committed to meet the expectation and trust of people who join us in our endeavor to develop the community.</p>
+                </div>
+            
+                <h3 style="color: #000000; margin-top: 40px;">OUR SPECIALITIES</h3>
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+                    <div class="col">
+                        <div class="card d-flex flex-column h-100">
+                            <img src="img5.jpg" alt="Avatar" class="img-fluid">
+                            <div class="card-body">
+                                <h3>COMPETITIVE</h3>
+                                <p>We live with the same competitive spirit as our students and aim to be ahead in all that we do.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card">
-                        <img  src="img7.jpg" alt="Avatar" style="width:100%" class="img1" >
-                        <h3>CARE</h3>
-                        <p>We care for everyone we engage with and respect them for their personal and professional worth without any bias.</p>
-                    </div>     
+                    <div class="col">
+                        <div class="card d-flex flex-column h-100">
+                            <img src="img6.png" alt="Avatar" class="img-fluid">
+                            <div class="card-body">
+                                <h3>COMMITMENT</h3>
+                                <p>We are committed to meeting the expectations and trust of people who join us in our endeavor to develop the community.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card d-flex flex-column h-100">
+                            <img src="img7.jpg" alt="Avatar" class="img-fluid">
+                            <div class="card-body">
+                                <h3>CARE</h3>
+                                <p>We care for everyone we engage with and respect them for their personal and professional worth without any bias.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+            
 
             <div id="about" class="page" style="display: none;">
                 <h3 style="color: #000000; margin-top: 40px;">ABOUT US</h3>
-                <p>Write about here. Write about here.Write about here.Write about here.Write about here.</p>
-                <div class="card-container">
-                    <div class="card">
-                        <img  src="logo.png" alt="Avatar" style="width:100%" class="img1" >
-                        <h3>Card 1</h3>
-                        <p>Content for card 1.Content for card 3.Content for card 3.Content for card 3.</p>
+                <p>Write about here. Write about here. Write about here. Write about here. Write about here.</p>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 card-container">
+                    <div class="col">
+                        <div class="card">
+                            <img src="logo.png" alt="Avatar" class="img-fluid">
+                            <h3>Card 1</h3>
+                            <p>Content for card 1. Content for card 3. Content for card 3. Content for card 3.</p>
+                        </div>
                     </div>
-                    <div class="card">
-                        <img  src="logo.png" alt="Avatar" style="width:100%" class="img1" >
-                        <h3>Card 2</h3>
-                        <p>Content for card 2.Content for card 3.Content for card 3.Content for card 3.</p>
+                    <div class="col">
+                        <div class="card">
+                            <img src="logo.png" alt="Avatar" class="img-fluid">
+                            <h3>Card 2</h3>
+                            <p>Content for card 2. Content for card 3. Content for card 3. Content for card 3.</p>
+                        </div>
                     </div>
-                    <div class="card">
-                        <img  src="logo.png" alt="Avatar" style="width:100%" class="img1" >
-                        <h3>Card 3</h3>
-                        <p>Content for card 3.Content for card 3.Content for card 3.Content for card 3.</p>
+                    <div class="col">
+                        <div class="card">
+                            <img src="logo.png" alt="Avatar" class="img-fluid">
+                            <h3>Card 3</h3>
+                            <p>Content for card 3. Content for card 3. Content for card 3. Content for card 3.</p>
+                        </div>
                     </div>
                 </div>  
             </div>
 
             <div id="classes" class="page" style="display: none;">
-                <h3 style="color: #000000; margin-top: 20px;">GMEET LINK </h3>
-                
-                <h3 style="color: #000000; margin-top: 20px;"></h3>
-                <div class="card-container">
-                    <div class="card">
-                      
-                        <p>link of gmeet.link of gmeet.link of gmeet.link of gmeet.link of gmeet.link of gmeet.</p>
+                <div class="container mt-4">
+                    <!-- Page Title -->
+                    <h3 class="text-center text-dark mb-4">GMEET LINK</h3>
+            
+                    <!-- Add Link Form -->
+                    <div class="row g-4">
+                        <!-- Add Link Card 1 -->
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-6 col-xl-6"> <!-- 50% width on lg and xl screens -->
+                            <div class="card p-3 shadow h-100 d-flex flex-column">
+                                <div class="mb-3">
+                                    <label for="gmeetLink1" class="form-label">GMEET LINK</label>
+                                    <input id="gmeetLink1" type="text" class="form-control" placeholder="Enter GMeet Link">
+                                </div>
+                                <button class="btn btn-primary w-100">Add Link</button>
+                            </div>
+                        </div>
+                        <!-- Add Link Card 2 -->
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-6 col-xl-6"> <!-- 50% width on lg and xl screens -->
+                            <div class="card p-3 shadow h-100 d-flex flex-column">
+                                <div class="mb-3">
+                                    <label for="gmeetLink2" class="form-label">GMEET LINK</label>
+                                    <input id="gmeetLink2" type="text" class="form-control" placeholder="Enter GMeet Link">
+                                </div>
+                                <button class="btn btn-primary w-100">Add Link</button>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-6 col-xl-6"> <!-- 50% width on lg and xl screens -->
+                            <div class="card p-3 shadow h-100 d-flex flex-column">
+                                <div class="mb-3">
+                                    <label for="gmeetLink1" class="form-label">GMEET LINK</label>
+                                    <input id="gmeetLink1" type="text" class="form-control" placeholder="Enter GMeet Link">
+                                </div>
+                                <button class="btn btn-primary w-100">Add Link</button>
+                            </div>
+                        </div>
+                        <!-- Add Link Card 2 -->
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-6 col-xl-6"> <!-- 50% width on lg and xl screens -->
+                            <div class="card p-3 shadow h-100 d-flex flex-column">
+                                <div class="mb-3">
+                                    <label for="gmeetLink2" class="form-label">GMEET LINK</label>
+                                    <input id="gmeetLink2" type="text" class="form-control" placeholder="Enter GMeet Link">
+                                </div>
+                                <button class="btn btn-primary w-100">Add Link</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card">
-                        
-                        <p>link of gmeet.link of gmeet.link of gmeet.link of gmeet.link of gmeet.link of gmeet.</p>
-                    </div>
-                    <div class="card">
-                        <p>link of gmeet.link of gmeet.link of gmeet.link of gmeet.link of gmeet.link of gmeet.</p>
-                    </div> 
                 </div>
             </div>
-
+            
+            
 
             <div id="contact" class="page" style="display: none;">
-                <div class="card-container">
-                    <div class="card">
-                        <img  src="whats.png" alt="Avatar" style="width:100%" class="img1" >
-                        <h3>WHATSAPP</h3>
-                        <p>1234456789</p>
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 card-container">
+                    <div class="col">
+                        <div class="card h-100 d-flex flex-column"> <!-- Use flex and h-100 for full height -->
+                            <img src="whats.png" alt="Avatar" class="img-fluid">
+                            <h3>WHATSAPP</h3>
+                            <p>1234456789</p>
+                        </div>
                     </div>
-                    <div class="card">
-                        <img  src="mail.webp" alt="Avatar" style="width:100%" class="mail_img" >
-                        <h3>GMAIL</h3>
+                    <div class="col">
+                        <div class="card h-100 d-flex flex-column"> <!-- Use flex and h-100 for full height -->
+                            <img src="mail.webp" alt="Avatar" class="img-fluid">
+                            <h3>GMAIL</h3>
+                        </div>
                     </div>
-                    
                 </div>
             </div>
+            
+            
 
         </main>
-
 
         <div class="wrapper">
             <span class="icon-close">
@@ -159,7 +260,7 @@
                 <form onsubmit="return validate()">
                     <div class="input-box">
                         <span class="icon">
-                            <ion-icon name = "mail"></ion-icon> 
+                            <ion-icon name="mail"></ion-icon> 
                          </span>
                         <input id="email">
                         <label>Email ID</label>
@@ -169,7 +270,7 @@
                             <ion-icon name="lock-closed"></ion-icon>
                         </span>
                         <input id="password" >
-                        <label> Password</label>
+                        <label>Password</label>
                     </div>
                     <div class="remember-forgot">
                         <label><input type="checkbox"> Remember me</label>
@@ -185,11 +286,11 @@
                 </form>
             </div>
             <div class="form-box register">
-                <h2>registration</h2>
+                <h2>Registration</h2>
                 <form onsubmit="return validate_registration()" action="#">
                     <div class="input-box">
                         <span class="icon">
-                            <ion-icon name = "person"></ion-icon> 
+                            <ion-icon name="person"></ion-icon> 
                          </span>
                         <input id="uname" type="text" >
                         <label>Username</label>
@@ -206,7 +307,7 @@
                             <ion-icon name="lock-closed"></ion-icon>
                         </span>
                         <input id="reg-password">
-                        <label> Password</label>
+                        <label>Password</label>
                     </div>
                     <div class="remember-forgot">
                         <label><input type="checkbox"> I agree to the terms & conditions </label>
@@ -216,7 +317,7 @@
 
                     <button type="submit" class="btn">Register</button>
                     <div class="login-register">
-                        <p>already have an account <a href="#" class="login-link">Login</a></p>
+                        <p>Already have an account <a href="#" class="login-link">Login</a></p>
                     </div>
                 </form>
             </div>

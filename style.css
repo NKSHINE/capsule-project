@@ -1,22 +1,8 @@
-.card-1 {
-   background-image: url('logo.png');
-}
-
 .card {
-   
-   min-height: 250px;
-   background: #ffffff; /* Card background color */
-   border-radius: 15px;
    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Base shadow */
-  
-   overflow: hidden;
    transition: 0.3s; /* Smooth effect for hover states */
    background-color: rgba(211, 192, 255, 0.519); /* White with 80% opacity */
-   
    padding: 20px; /* Adds space inside the card */
-  
-   width: 25%;
-   margin: 20px auto ; /* Centers the card horizontally */
    text-align: center;
 }
 
@@ -63,14 +49,12 @@
    }
 }
 
- 
- 
- 
- * {
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+.card {
+   
+   position: relative;
+   overflow: hidden;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   transition: box-shadow 0.3s ease-in-out;
 }
 
 body{
@@ -89,88 +73,10 @@ header{
    top: 0;
    left: 0;
    width: 100%;
-  
-   display: flex ;
    justify-content: space between;
    align-items: center;
    z-index: 99;
-   background-color: #ac9f9f;
-   
-}
-img {
-   border-radius: 50%;
- }
-
-.mail_img{
-   width: 90px;
-   height: 150px;
-}
-
- .img1 {
-   
- 
-   width: 10px; /* Reduced width */
-   height: auto; /* Image takes 50% of the container's width */
- 
- 
- }
-.logo{
-   color: #ffffff;
-   position: relative;
-   height: 70px; /* Adjust as needed */
-   left:0;
-   border-radius: 50%;
-   text-align: left;
- }
-
-.navigation a{
-   position: relative;
-   font-size: 1.1em;
-   color:#fff;
-   text-decoration: none;
-   font-weight: 500;
-   margin-left: 40px;
-   
-}
-
-.navigation a::after{
-   content:'';
-   position: absolute;
-   left:0;
-   bottom: -6px;
-   width:100%;
-   height:3px;
-   background: #ffffff;
-   border-radius:5px;
-   transform-origin: right;
-   transform: scaleX(0);
-   transition: transform .5s;
-}
-
-.navigation a:hover::after{
-   transform-origin:left;
-   transform: scale(1);
-}
-
-
-.navigation .btnLogin-popup{
-   width: 130px;
-   height: 50px;
-   background: transparent;
-   border: 2px solid #fff;
-   outline: none;
-   border-radius: 6px;
-   cursor: pointer;
-   font-size: 1.1em;
-   color:#fff;
-   font-weight: 500;
-   margin-left: 40px;
-   transition: .5s;
-}
-
-.navigation .btnLogin-popup:hover{
-   background: #fff;
-   color: #162938;
+   background-color: #ac9f9f; 
 }
 
 .wrapper {
@@ -200,8 +106,6 @@ img {
 .wrapper.active {
    height: 520px;
 }
-
-
 
 .wrapper .form-box {
    width: 100%;
@@ -354,155 +258,9 @@ transform: translateX(0);
    text-decoration: underline;
 }
 
-
-
-.home{
-   color: rgb(0, 0, 0);
-   display: flex;
-   margin-top: 10px; /* Adjust this value as needed */
-}
-#content {
-   margin-top: 100px; /* Adjust this value as needed */
-   margin-left: 10px;
-}
-#introduction {
-   background-color: rgba(136, 0, 0, 0); /* Semi-transparent background */
-   border: 2px solid rgba(255, 255, 255, 0.0); /* Subtle border */
-   border-radius: 10px; /* Rounded corners */
-   backdrop-filter: blur(10px); /* Glassmorphism effect */
-   box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3); /* Soft shadow */
-   padding: 20px 30px; /* Inner spacing */
-   margin: 10px; /* Center alignment */
-   max-width: 800px; /* Restrict width */
-   text-align: left; /* Center-align text */
-   color: #162938; /* Primary text color */
-   font-family: 'Poppins', sans-serif; /* Consistent font */
-   margin-bottom: 30px; /* Adjust as needed */
-   padding: 20px;
-   
-   border-radius: 10px;
-}
-
-#introduction h1 {
-   font-size: 2.5em;
-   color: white;
-   margin: 10px;
-}
-
-#introduction h2 {
-   color: rgb(0, 0, 0); /* Match with table header color */
-   font-size: 1.5em;
-   margin: 10px;
-   font-family: 'Poppins', sans-serif;
-}
-
-#introduction p {
-   font-size: 1em;
-   color: #000000;
-   margin: 10px;
-   
-}
-
-#introduction, .class-schedule {
-   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-   
-}
-
-.class-schedule {
-   width: 100%;
-   max-width: 800px;
-   margin: 20px auto;
-   border-collapse: collapse;
-   text-align: left;
-   font-family: 'Poppins', sans-serif;
-   background-color: rgba(255, 255, 255, 0.4);
-   border: 2px solid rgba(255, 255, 255, 0.3);
-   border-radius: 10px;
-   backdrop-filter: blur(10px);
-   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-   overflow: hidden;
-   margin: 10px;
-}
-
-
-
-.class-schedule thead {
-   background-color: #162938; /* Matches your theme's primary color */
-   color: #fff;
-   text-transform: uppercase;
-}
-
-.class-schedule th, .class-schedule td {
-   padding: 15px;
-   border: none;
-   font-size: 1em;
-   color: #162938;
-   font-weight: 500;
-}
-
-.class-schedule tr:nth-child(even) {
-   background-color: rgba(22, 41, 56, 0.1); /* Subtle highlight for alternating rows */
-}
-
-.class-schedule tr:hover {
-   background-color: rgba(22, 41, 56, 0.2); /* Slight hover effect */
-}
-
-.class-schedule th {
-   font-size: 1.1em;
-   font-weight: 600;
-   text-align: left;
-   color: #0d124a;
-}
-
-.class-schedule-container {
-   display: flex;
-   justify-content: center;
-   margin-top: 20px; /* Add some top margin to push it down from the intro section */
-}
-
-.card-container {
-   display: flex;
-   
-   justify-content: center;
-   gap: 10px; /* Space between cards */
-   margin: 10px;
-}
-
-
-.intro-card{
-   background-color: rgba(56, 48, 84, 0.2);
-   border-radius: 10px; /* Optional: Rounds the corners */
-   padding: 30px; /* Adds space inside the card */
-  
-  
-   margin: 20px auto; /* Centers the card horizontally */
-   text-align: center;
-
-}
-@media (max-width: 768px) {
-   header {
-       padding: 20px 50px;
-   }
-
-   .navigation a {
-       margin-left: 20px;
-       font-size: 1em;
-   }
-
-   .card-container {
-       flex-direction: column;
-       align-items: center;
-   }
-
-   .card {
-       width: 80%;
-   }
-}
-
 .btn:hover {
    background-color: #fff;
-   color: #187ecc;
+   color: #000000;
    transform: scale(1.05);
    transition: 0.3s ease;
 }
