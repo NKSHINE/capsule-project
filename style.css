@@ -4,6 +4,8 @@
    background-color: rgba(211, 192, 255, 0.519); /* White with 80% opacity */
    padding: 20px; /* Adds space inside the card */
    text-align: center;
+   position: relative;
+   overflow: hidden;
 }
 
 /* Adding the shining effect */
@@ -49,15 +51,10 @@
    }
 }
 
-.card {
-   
-   position: relative;
-   overflow: hidden;
-   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-   transition: box-shadow 0.3s ease-in-out;
-}
+
 
 body{
+   padding: 20px;
    font-family:'Times New Roman', Times, serif ;
    display:flex;
    justify-content: center;
